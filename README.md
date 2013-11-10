@@ -1,4 +1,5 @@
-Cmpe-272-SentimentalAnalysis
+Cmpe-272-ConfRate
+#ConfRate would give users the rating of the conferences based on the twitter sentiment analysis.
 ============================
 
 #Steps to successfully install twython on linux 
