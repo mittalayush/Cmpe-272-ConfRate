@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sentiment Right Now!</title>
+<style type="text/css">
+body
+{
+background-color:#7F5A58
+}
+</style>
+</head>
+
+<br><br><br><br><br><br>
+
+<center>
+<font size='8' align = "center"> ConfRate Now: The Conference Master!
+</font>
+</center>
+<body>
+<div><br><br><br><br>
+     <form method="POST" id="mainform"action="" align = "center"> {% csrf_token %}
+  		<input type="hidden" name="" value="" />
+  		<input type="hidden" name="" value="" />
+  		<input type="hidden" name="" value="" />
+  		<center>
+		<input name="keyword" type="text" size="30" style="font-size:20pt;" />
+  		<input type="submit" value="Analyse" style="font-size:15pt;" />
+</center>
+     </form>
+
+<br><br><br><br><br><br><br><br><br><br><I>
+<H4 align='left'>RATINGS:</H4>
+<H5 align='left'>
+**** MUST GO&nbsp&nbsp;
+***  GO&nbsp;&nbsp;
+**   FAIR&nbsp;&nbsp;
+*    USELESS
+</I></H5>
+<br>
+<font align='left' size=2> *Please note: ConfRate uses only twitter to analyse current trending sentiments</fonr>
+</div>
+</body>
