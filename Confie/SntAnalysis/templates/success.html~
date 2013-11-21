@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sentiment Right Now!</title>
+<style type="text/css">
+body
+{
+background-color:#7F5A58
+}
+</style>
+</head>
+
+<body>
+<a href="http://127.0.0.1:8000/"> <u><H4>Analyse More Conferences</H4></u></a>
+<center>
+
+<br><br>
+<font size=12 align = "center"> ConfRate Now: The Conference Master!</font>
+</center>
+
+<div><br><br><br><br>
+<center><H2><I>{{ positive }}% of tweets were positive. Our Tweets suggest: </I></H2><br>
+<H2>{{ conferenceName }} - <I>{{ message }}</I> <H2>
+</center>
+</div>
+</body>

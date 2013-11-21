@@ -1,10 +1,10 @@
-# Django settings for FirstBlog project.
-
+# Django settings for Confie project.
+import os.path
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('cmpe-272-team24', 'your_email@example.com'),
 )
 
 MANAGERS = ADMINS
@@ -101,10 +101,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfResponseMiddleware',
 )
 
-ROOT_URLCONF = 'FirstBlog.urls'
+ROOT_URLCONF = 'Confie.urls'
 
 TEMPLATE_DIRS = (
-    '/home/ayush/Documents/Projects/FirstBlog/blog/templates',
+    '/home/ayush/Documents/Projects/Confie/SntAnalysis/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'FirstBlog.blog',
+    'Confie.SntAnalysis',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

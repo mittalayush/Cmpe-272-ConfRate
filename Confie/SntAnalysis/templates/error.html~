@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Sentiment Right Now!</title>
+<style type="text/css">
+body
+{
+background-color:#7F5A58
+}
+</style>
+</head>
+
+<br><br><br><br><br><br>
+
+<a href="http://127.0.0.1:8000/"> <u><H4>>>Back to Analyse Page</H4></u></a>
+<br><br><br><br><br><br><br><br>
+<center><font size=10 align = "center"> ConfRate Now: The Conference Master!</font>
+</center><body>
+<div><br><br>
+       <form method="POST" id="mainform" action="" align = "center"> {% csrf_token %}
+  		<input type="hidden" name="" value="" />
+  		<input type="hidden" name="" value="" />
+  		<input type="hidden" name="" value="" />
+  		<center>
+		<H3>Please enter some correct conference name !</H3>
+		</center>
+     </form>
+</div>
+</body>

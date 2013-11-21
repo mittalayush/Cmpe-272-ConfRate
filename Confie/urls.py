@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import patterns, include, url
-import blog.views
+import SntAnalysis.views
 import settings
-from blog.views import index
+from SntAnalysis.views import index
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -10,8 +10,8 @@ from blog.views import index
 urlpatterns = patterns('',
     # Examples:
     #url(r'^$', index)
-     url(r'^$', 'FirstBlog.blog.views.index', name='index'),
-    # url(r'^FirstBlog/', include('FirstBlog.foo.urls')),
+     url(r'^$', 'Confie.SntAnalysis.views.index', name='index'),
+    # url(r'^Confie/', include('Confie.foo.urls')),
       url(r'(?:.*?/)?(?P<path>(css|jquery|jscripts|images)/.+)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT }),
 
     # Uncomment the admin/doc line below to enable admin documentation:
