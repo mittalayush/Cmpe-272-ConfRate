@@ -35,10 +35,10 @@ def rate(request):
 		
 		#checking if the input received is a correct keyword not junk characters
 		if len(strConference)>3 and not strConference in stopwords.words('english') :
-			APP_KEY='QKvB6siChGmTzsFJI3ANCA'
-			APP_SECRET='ynvs7PVDjJssynFSqJ6ms52gLxubQI5uSorkVF27Z0'
-			OAUTH_TOKEN='105572257-x6M2JpHc7qDW4Ru5jf4LnKOAxJiUJ34OCk1Tmqh8'
-			OAUTH_TOKEN_SECRET='a4O7FRdjKJi5jTxZ37jAPiXnqKgG1N8nbsF0DPML9oI'
+			APP_KEY=''
+			APP_SECRET=''
+			OAUTH_TOKEN=''
+			OAUTH_TOKEN_SECRET=''
 			
 			customstopwords = ['show','they', 'them','but','conference',',','code','weekend','this','the', 'conference', 'is', 				'and','are', 'to', 'a', 'they', '!', 'so','my','at','of','it','i','was','for','.']
 			twitterCustomwords= ['rt', ',','@','http',':','//']
