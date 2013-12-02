@@ -23,6 +23,66 @@
       <script src="js/html5shiv.js"></script>
       <link rel="stylesheet" media="screen" href="css/ie.css">
     <![endif]-->
+
+
+		<style type="text/css" title="currentStyle">
+			@import "css/demo_page.css";
+			@import "css/demo_table.css";
+		</style>
+		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#example').dataTable();
+			} );
+		</script>
+
+<script type="text/javascript">
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Tweets for conference'
+        },
+        tooltip: {
+    	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Tweets',
+            data: [
+                ['Negative',   45.0],
+                ['Neutral',   26.8],
+                {
+                    name: 'Positive Tweets',
+                    y: 12.8,
+                    sliced: true,
+                    selected: true
+                }
+                
+            ]
+        }]
+    });
+});
+    </script>
+<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="js/highcharts.js"></script>
+<script type="text/javascript" language="javascript" src="js/exporting.js"></script>
 </head>
 <body>
 <!--==============================header=================================-->
@@ -48,29 +108,216 @@
 <div id="content"><div class="ic">More Website Templates @ TemplateMonster.com - July 22, 2013!</div>
 	<div class="container_12 bot-1">
 		<div class="grid_12">
-        	<h2 class="indent-2"><center>Conf-Rate</center></h2>
-			     <form method="POST" id="mainform"action="" align = "center">
-  		<input type="hidden" name="" value="" />
-  		<input type="hidden" name="" value="" />
-  		<input type="hidden" name="" value="" />
-  		<center>
-		<input name="keyword" type="text" size="30" style="font-size:20pt;" />
-  		<input type="submit" value="Analyse" style="font-size:15pt;" />
-</center>
-     </form>
+			<h2 class="indent-2"><center>Conf-Rate</center></h2>
+			<form method="POST" id="mainform"action="" align = "center">
+				<input type="hidden" name="" value="" />
+				<input type="hidden" name="" value="" />
+				<input type="hidden" name="" value="" />
+				<center>
+				<input name="keyword" type="text" size="30" style="font-size:20pt;" />
+				<input type="submit" value="Analyse" style="font-size:15pt;" />
+				</center>
+			 </form>
 
-<br><br><br><br><br><br><br><br><br><br><I>
-<H4 align='left'>RATING:</H4>
-<br>
-<H5 align='left'>
-**** MUST GO&nbsp&nbsp;
-***  GO&nbsp;&nbsp;
-**   FAIR&nbsp;&nbsp;
-*    USELESS
-</I></H5>
-<br>
-<font align='left' size=2> </font>
+			<br><br>
+
+			<I>
+			<H4 align='left'>RATING:</H4>
+			<br>
+			<H5 align='left'>
+			**** MUST GO&nbsp&nbsp;
+			***  GO&nbsp;&nbsp;
+			**   FAIR&nbsp;&nbsp;
+			*    USELESS
+			</I></H5>
+			<br>
+			<font align='left' size=2> </font>
 		</div>
+
+
+		<div class="grid_12" id="demo">
+			<h2 class="indent-2"><center>Conf-Rate</center></h2>
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+	<thead>
+		<tr>
+			<th>Username</th>
+			<th>Date & Time</th>
+			<th>Tweet</th>
+			<th>Location</th>
+			<th>Other</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="odd gradeX">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeC">
+			<td>TrConfRateident</td>
+			<td>22th Nov 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>22th Nov 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>22th Nov 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>04th Sep 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>04th Sep 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+				<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+				<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>04th Sep 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="odd gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+		<tr class="even gradeA">
+			<td>TrConfRateident</td>
+			<td>10th Oct 2013</td>
+			<td>At the oracle conference and its great. a must go for all</td>
+			<td class="center">NA</td>
+			<td class="center">NA</td>
+		</tr>
+
+
+
+	</tbody>
+</table>		
+</div>
+
+<div class="grid_12">
+	<h2 class="indent-2"><center>Charts</center></h2>
+	<br>
+	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div>
+			<br>
+			<br>
+
         <div class="grid_6">
         	<span class="lead">PLEASE NOTE: </span><br><br>
             * ConfRate uses only twitter to analyse current trending sentiments.

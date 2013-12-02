@@ -7,16 +7,18 @@ from SntAnalysis.views import index
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
-    #url(r'^$', index)
-     url(r'^$', 'Confie.SntAnalysis.views.index', name='index'),
-    # url(r'^Confie/', include('Confie.foo.urls')),
-      url(r'(?:.*?/)?(?P<path>(css|jquery|jscripts|images)/.+)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT }),
+	urlpatterns = patterns('',
+    	# Examples:
+    	#url(r'^$', index)
+     	url(r'^$', 'Confie.SntAnalysis.views.index', name='index'),
+     	url(r'^rate$', 'Confie.SntAnalysis.views.rate', name='rate'),
+	url(r'^success$', 'Confie.SntAnalysis.views.success', name='success'),
+	url(r'^error$', 'Confie.SntAnalysis.views.error', name='error'),
+     	# url(r'(?:.*?/)?(?P<path>(css|jquery|jscripts|images)/.+)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT }),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    	# Uncomment the admin/doc line below to enable admin documentation:
+    	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
-)
+    	# Uncomment the next line to enable the admin:
+    	# url(r'^admin/', include(admin.site.urls)),
+	)
