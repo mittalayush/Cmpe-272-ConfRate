@@ -52,19 +52,20 @@ def rate(request):
 			tmp=0
  
 			#Load positive tweets into a list
-			p = open('/home/ayush/Documents/Projects/FirstBlog/blog/postweets.txt', 'r')
+			p = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/postweets.txt', 'r')
+			
 			positivetxt = p.readlines()
  
 			#Load negative tweets into a list
-			n = open('/home/ayush/Documents/Projects/FirstBlog/blog/negtweets.txt', 'r')
+			n = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/negtweets.txt', 'r')
 			Negativetxt = n.readlines()
 			
-			n = open('/home/ayush/Documents/Projects/FirstBlog/blog/neutaltweets.txt', 'r')
-			Neutraltxt = n.readlines()
+			#n = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/neutaltweets.txt', 'r')
+			#Neutraltxt = n.readlines()
 			
 			NegativeList = []
 			positiveList = []
-			NeutralList=[]
+			#NeutralList=[]
  
 			#Create a list of 'negatives' with the exact length of our negative tweet list.
 			for i in range(0,len(Negativetxt)):
@@ -156,16 +157,17 @@ def rate(request):
     				FetchTweet = [a for a in FetchTweet if not a in stopwords.words('english')]
     				FetchTweet = [b for b in FetchTweet if not b in twitterCustomwords]
     				
-    				print tweet['text'].encode('utf-8'),'---output--', classifier.classify(extractFeature(FetchTweet))
+    				print tweet['text'].encode('utf-8')
+				print tweet['text'].encode(encoding='UTF-8',errors='strict')
     				if classifier.classify(extractFeature(FetchTweet)) == 'positive':
 					PositiveCount+=1
     				elif classifier.classify(extractFeature(FetchTweet)) == 'neutral':
 					NeutralCount+=1
 				else:
 					NegativeCount+=1
-			print 'length------', len(ListTweet)
+			
 	
-			if len(ListTweet)<=1:
+			if len(ListTweet)<=20:
 				ListTweet.append(' ')
 				ListTweet.append(' ')
 				ListTweet.append(' ')
@@ -192,7 +194,8 @@ def rate(request):
 			print 'Neutal counts', NeutralCount
 			print 'Negatives counts', NegativeCount
 			print 'Positive counts', PositiveCount
-			print 'Total length-------------',len (ListTweet)
+			print 'tweets in the list',ListTweet
+			
 
 			if counter!=0 and PositiveCount!=0:
 				PositivePerc=PositiveCount/(counter)*100			
@@ -200,8 +203,6 @@ def rate(request):
 				PositivePerc=0
 
 			NegativePerc=100-PositivePerc
-
-			#print 'positive and negative percernatges',PositivePerc,NegativePerc
 
 			if PositiveCount==0:
 				score=0
