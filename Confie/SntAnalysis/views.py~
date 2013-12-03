@@ -52,12 +52,12 @@ def rate(request):
 			tmp=0
  
 			#Load positive tweets into a list
-			p = open('/home/ubuntu/Cmpe-272-ConfRate/Confie/SntAnalysis/postweets.txt', 'r')
+			p = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/postweets.txt', 'r')
 			
 			positivetxt = p.readlines()
  
 			#Load negative tweets into a list
-			n = open('/home/ubuntu/Cmpe-272-ConfRate/Confie/SntAnalysis/negtweets.txt', 'r')
+			n = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/negtweets.txt', 'r')
 			Negativetxt = n.readlines()
 			
 			#n = open('/home/ayush/Cmpe-272-ConfRate/Confie/SntAnalysis/neutaltweets.txt', 'r')
