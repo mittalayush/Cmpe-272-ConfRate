@@ -1,5 +1,7 @@
 Cmpe-272-ConfRate
 #ConfRate would give users the rating of the conferences trending at that point of time based on twitter sentiment analysis.
+#please use this file for the project currently deployed on amazon aws :
+Cmpe-272-ConfRate / Confie / SntAnalysis 
 
 #Steps to successfully install twython on linux:
 
