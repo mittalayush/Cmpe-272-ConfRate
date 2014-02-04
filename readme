@@ -1,0 +1,4 @@
+User Interface implementing css and jquery has been implemented.
+
+Main file is index.html, search page is index-1.html. 
+Error is displayed via error.html and upon success of query, it displays calls success.html.
